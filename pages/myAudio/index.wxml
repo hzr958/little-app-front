@@ -1,0 +1,56 @@
+<view class="container" style="background: url(../../images/mypage/ykt-bg.png) no-repeat bottom center;background-size: contain;">
+<block wx:if="{{radioRecords.length==0}}">
+  <image src="{{cartImg}}" class="cart-image"/>
+  <view class='cart-image-text'>{{tipWords}}</view>
+</block>
+      <!--一卡通-->
+  <block wx:if="{{radioRecords.length!=0}}">
+  <view class="card-item-hd">
+          <image class="card-item-icon" src="{{userInfo.avatarUrl}}"></image>
+          <text class="card-item-name">{{userInfo.nickName}}</text>
+        </view>
+    <block wx:for-items="{{radioRecords}}" wx:for-item="item">
+    <view class="main-card-item" id="ykt" style="background: url(../../images/mypage/ykt-bg.png) no-repeat bottom center;background-size: contain;" data-audioId="{{item.audioId}}" data-courseId='{{item.courseId}}'>
+      <navigator url="/pages/core/ykt/ykt">
+        <view class="card-info-hd">
+            <view class="card-info-left">
+              <text>{{item.courseTitle}}</text>
+            </view>
+            <view class="card-info-right">
+              <view class="ykt-title">上传时间：{{item.upLoadTime}}</view>
+            </view>
+          </view>
+        <view class="readingItem-content">
+                    <view class="readingItem-audio-content">
+                        <image class="read-audio-icon" src="../../images/assignmentdetails/btn_read_videoPlay.png" id="{{index}}"
+                               bindtap="tapPlayPartAudio">
+                            <audio src="{{item.audio_url}}" id="partaudio-{{index}}"></audio>
+                        </image>
+                        <view class="read-audio-info">
+                            <text class="ri-en_content">{{item.courseDesc}}</text>
+                        </view>
+                    </view>
+
+                    <!-- 底部 控制区域 -->
+                    <view class="read-audio-control">
+                        <progress percent="{{currentProgress}}" stroke-width="6" class="read-audio-progress" color="#1ECFA7"/>
+                        <text class="read-audio-duration">{{item.audio_duration}}'</text>
+                        <image class="audio-listen" src="../../images/assignmentdetails/btn_read_listenS.png"
+                               bindtap="tapRePlayUserAudio" id="replay-{{index}}" data-reading_item="{{index}}"></image>
+                        <block wx:if="{{recording == true}}">
+                            <image class="audio-record" src="../../images/assignmentdetails/btn_read_record_stop.png"
+                                   bindtap="tapCompleteUserAudio" id="record-{{index}}"
+                                   data-reading_item="{{index}}"></image>
+                        </block>
+                        <block wx:if="{{recording == false}}">
+                            <image class="audio-record" src="../../images/assignmentdetails/btn_read_record.png"
+                                   bindtap="tapRecordUserAudio" id="record-{{index}}"
+                                   data-reading_item="{{index}}"></image>
+                        </block>
+                    </view>
+                </view>
+      </navigator>
+    </view>
+    </block>
+  </block>
+</view>

@@ -1,0 +1,144 @@
+page{
+  background: #F2f2f2;
+}
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  color: #F2f2f2;
+}
+.nav_left{
+  display: inline-block; 
+  width: 25%;
+  height: 100%;
+  background: #F2f2f2;
+  text-align: center;
+}
+.nav_left .nav_left_items{
+  height: 30px;
+  line-height: 30px;
+  padding: 6px 0;
+  border-bottom: 1px solid #dedede;
+  font-size: 14px;
+}
+.nav_left .nav_left_items.active{
+  background: #F2f2f2;
+}
+.nav_right{
+  position: absolute;
+  top: 45px;
+  right: 0;
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+  background: #F2f2f2;
+  box-sizing: border-box;
+}
+.nav_right .nav_right_items{
+  float: left;
+  width: 33.33%;
+  height: 80px;
+  text-align: center;
+}
+.nav_right .nav_right_items image{
+  width: 50px;
+  height: 30px;
+}
+.nav_right .nav_right_items text{
+  display: block;
+  margin-top: 5px;
+  font-size: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.menu{
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  background: #F2f2f2;
+  border-bottom:#eee solid 1px;
+  z-index: 100000
+}
+
+.top-nav{
+    white-space: nowrap;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.top-btn{
+    display: inline-block;
+    padding: 22rpx;
+    font-size: 16px;
+}
+.top-btn.active{
+    color: #42bd56;
+    border-bottom: #42bd56 solid 1px;
+}
+
+.container-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  font-family: "Helvetica Neue",Arial,"PingFang SC","Microsoft YaHei",sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333;
+}
+.course-item{
+  padding: 10px;
+  display: flex;
+}
+.course-image{
+  width: 128px;
+}
+.course-image image{
+  width: 100%;
+  height: 180px;
+  box-shadow:3rpx 3rpx 3rpx 3rpx #a9a9a9
+}
+.course-info{
+  padding-left: 10px;
+  flex: 1;
+}
+.course-info view{
+  margin-bottom: 10px;
+}
+.course-info .label{
+  margin-right: 5px;
+  color: #666;
+}
+.course-info .duration{
+  color: #e09015;
+}
+.course-title{
+ font-size: 18px;
+ margin-right: 10px;
+}
+.course-year{
+  font-size: 16px;
+  color: #999;
+}
+.summary {
+    /* margin-top: 30rpx; */
+    line-height: 1.5;
+    font-size: 12px;
+    color: #a9a9a9;
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.article-split {
+    width: 100%;
+    height: 6rpx;
+    background-color: #eee;
+    border-top: 1px solid #e2e2e2;
+}

@@ -1,0 +1,61 @@
+<!--index.wxml-->
+<view class="container">
+  <view  bindtap="bindViewTap" class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    <!-- <view class="hd" style="transform:rotateZ({{angle}}deg);">
+    <image class="wave" src="../../images/mypage/wave.png" mode="aspectFill"></image>
+    <image class="wave wave-bg" src="../../images/mypage/wave.png" mode="aspectFill"></image>
+    </view> -->
+  </view>
+  <view class="info_list">
+  <view class="main-card-item" id="kb" wx:if="{{myCourses.length>0}}">
+      <!-- <navigator url="/pages/core/kb/kb"> -->
+        <view class="card-item-hd">
+          <image class="card-item-icon" src="../../images/mypage/myCourse.png"></image>
+          <text class="card-item-name">我的课程</text>
+        </view>
+        <!-- <view wx:else class="card-item-bd">
+          <view class="kb-item" wx:for="{{myCourses}}" wx:key="myCourses.courseId">
+            <view class="kb-item-left">
+              <text class="kb-item-what">{{item.courseTitle}}</text>
+              <text class="kb-item-when">{{item.courseTime}}</text>
+            </view>
+            <text class="kb-item-where">{{item.where}}</text>
+          </view>
+        </view> -->
+  
+  <view class="content">
+    <view class="loader">
+      <image src="../../images/mypage/loading.gif" wx-if="{{loading}}"></image>
+    </view>
+    <view wx:if="{{myCourses.length==0}}" class="card-item-bd kb-nothing">
+          <text>今天居然没有课~😆</text>
+        </view>
+    <block wx:for="{{myCourses}}" wx:key="courseId">
+      <navigator url="/pages/news/{{item.type}}/{{item.type}}_detail?type={{item.type}}&id={{item.articleid}}">
+        <view class="list-item new">
+          <view class="list-item-left">
+            <text class="list-item-title">{{item.courseTitle}}</text>
+            <text class="list-item-time">{{item.courseTime}}</text>
+          </view >
+          <image class="list-item-icon" bindtap="signInDetail" data-userid='' data-courseid='{{item.courseId}}' src="../../images/mypage/dailysignin.png"></image>
+        </view>
+      </navigator>
+    </block>
+  </view>
+      <!-- </navigator> -->
+    </view>
+    
+    <block wx:for="{{userListInfo}}">
+        <view class="weui_cell" bindtap="signInDetail"data-text='{{item.text}}'data-userId=''>
+            <view class="weui_cell_hd"><image src="{{item.icon}}"></image></view>
+            <view class="weui_cell_bd">
+                <view class="weui_cell_bd_p"> {{item.text}} </view>
+            </view>
+            <view wx:if="{{item.isunread}}" class="badge">{{item.unreadNum}}</view>
+            <view class="with_arrow" style='background-image: url(../../images/icon-arrowdown.png);background-repeat: no-repeat;background-size: 100% 100%;'></view>
+        </view>
+    </block>
+  </view>
+</view>

@@ -1,0 +1,49 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/classify/index",
+    "pages/cart/index",
+    "pages/my/index",
+    "pages/myAudio/index",
+    "pages/details/index",
+    "pages/signin/index",
+    "pages/dailyassignment/dailyassignment",
+    "pages/dailyassignmentdetail/dailyassignmentdetail"
+  ],
+  "window":{
+    "backgroundTextStyle":"white",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "合略新桥",
+    "navigationBarBackgroundColor": "#61AB7A",
+    "backgroundColor": "#61AB7A",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#61AB7A",
+    "selectedColor": "#F0BE2D",
+    "borderStyle": "white",
+    "backgroundColor": "#ffffff",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "iconPath": "images/footer-icon-011.png",
+      "selectedIconPath": "images/footer-icon-011-active.png",
+      "text": "合略精品课程"
+    }, {
+      "pagePath": "pages/classify/index",
+      "iconPath": "images/footer-icon-021.png",
+      "selectedIconPath": "images/footer-icon-021-active.png",
+      "text": "课程分类"
+    }, {
+      "pagePath": "pages/cart/index",
+      "iconPath": "images/footer-icon-032.png",
+      "selectedIconPath": "images/footer-icon-032-active.png",
+      "text": "学友圈"
+    }, {
+      "pagePath": "pages/my/index",
+      "iconPath": "images/footer-icon-041.png",
+      "selectedIconPath": "images/footer-icon-041-active.png",
+      "text": "我的"
+    }]
+  },
+  "debug": true
+}

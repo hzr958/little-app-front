@@ -1,0 +1,30 @@
+<template name="coursebrief">
+    <view class="coursebrief-wrapper" data-id="{{item.id}}"  data-user-id="{{item.user.user_id}}" bindtap="viewStoryDetail">
+        <view class="header">
+            <text>{{item.courseCategory}}</text>
+        </view>
+        <view class="title">
+            <text>{{item.title}}</text>
+        </view>
+        <view class="author">
+            <text>合略 / {{item.teacher}}</text>
+        </view>
+        <view class="picture">
+            <image src="{{item.coursePics}}" mode="aspectFill"></image>
+        </view>
+        <view class="summary">
+            <text>{{item.summary}}</text>
+        </view>
+        <view class="footer clearfix">
+            <view class="before-time">
+                <text>已有{{item.studentNum}}名同学加入</text>
+            </view>
+            <view class="praise-share">
+                <text class="praise-num">{{item.praisenum}}</text>
+                <image class="praise-image" wx:if="{{item.is_collected}}" src="/images/icon/praise.png" catchtap="onCollectionTap" data-story-id="{{item.id}}"></image>
+                <image class="praise-image" wx:else src="/images/icon/favorites.png" catchtap="onCollectionTap" data-story-id="{{item.id}}"></image>
+            </view>
+        </view>
+    </view>
+    <view class="article-split"></view>  
+</template>

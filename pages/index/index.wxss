@@ -1,0 +1,172 @@
+.container {
+    border-top: 1px solid #b2b2b2;
+    background-color: #F2f2f2;
+}
+
+.swiper_box {
+    width: 100%;
+    height: 375rpx;
+}
+
+swiper-item image {
+    width: 100%;
+    display: inline-block;
+    overflow: hidden;
+}
+
+view.text {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 10px 10px 10px 12px;
+    font-size: 15px;
+    color: #656565;
+}
+
+view.text:before {
+    position: absolute;
+    display: block;
+    content: ' ';
+    left: -5px;
+    width: 2px;
+    height: 100%;
+    background-color: #09bb07;
+}
+
+.line_flag {
+    width: 3px;
+    height: 100%;
+    height: 15px;
+    display: inline-block;
+    background-color: #f9f027;
+}
+
+view.text text {
+    margin-left: 10px;
+    line-height: 18px;
+    font-weight: bold;
+}
+
+.venues_box {
+    padding: 0 10rpx;
+}
+
+.venues_item {
+    display: inline-block;
+    width: 49%;
+    margin: 0 0.5%;
+}
+
+.venues_item image{
+    width: 100%;
+    height: 90px;
+}
+
+.choice_box {
+    padding: 0 10rpx;
+}
+.choice_box .choice_list .choice_item{
+    margin-bottom: 15px;
+}
+.choice_box .choice_list image {
+    width: 100%;
+    height: 200px;
+}
+
+.choice_box .choice_list .title {
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+}
+
+.coursebrief-wrapper {
+    width: 100%;
+    padding: 0 42rpx;
+    box-sizing: border-box;
+}
+
+.header {
+    width: 100%;
+    height: 88rpx;
+    line-height: 88rpx;
+    text-align: center;
+    font-size: 14px;
+    color: #a9a9a9;
+}
+
+.title {
+    margin-bottom: 34rpx;
+    font-size: 20px;
+}
+
+.author {
+    padding-bottom: 34rpx;
+    border-bottom: 1px solid #f2f2f2;
+    font-size: 14px;
+    color: #a9a9a9;
+}
+
+.picture {
+    width: 100%;
+    height: 400rpx;
+    border-top: 10rpx dashed #e5e5e5;
+    border-bottom: 10rpx dashed #e5e5e5;
+}
+
+.picture image {
+    width: 100%;
+    height: 380rpx;
+    margin-top: 10rpx;
+}
+
+.summary {
+    margin-top: 30rpx;
+    line-height: 1.5;
+    font-size: 14px;
+    color: #a9a9a9;
+}
+
+.movie-title {
+    text-align: right;
+}
+
+.footer {
+    width: 100%;
+    margin-bottom: 30rpx;
+    margin-top: 80rpx;
+    font-size: 14px;
+    color: #a6a6a6;
+}
+
+.before-time {
+    float: left;
+}
+
+.praise-share {
+    float: right;
+}
+
+.praise-num {
+    display: inline-block;
+    margin-right: 10rpx;
+    font-size: 14px;    
+    vertical-align: top;
+}
+
+.praise-image, .share-image {
+    width: 18px;
+    height: 18px;
+    vertical-align: top;
+}
+
+.share-image {
+    margin-left: 30rpx;
+}
+
+.article-split {
+    width: 100%;
+    height: 14rpx;
+    background-color: #eee;
+    border-top: 1px solid #e2e2e2;
+}

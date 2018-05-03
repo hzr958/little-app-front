@@ -1,0 +1,66 @@
+<!-- <view class="container"> -->
+  <!-- <view class="nav_left"> -->
+  <view class="menu">
+  <scroll-view scroll-x="true" class="top-nav">
+    <block wx:for="{{navLeftItems}}">
+      <view class="top-btn nav_left_items1 {{curNav == item.id ? 'active' : ''}}" bindtap="switchRightTab" data-index="{{index}}" data-id="{{item.id}}">{{item.desc}}</view>
+    </block>
+    </scroll-view>
+  </view>
+
+
+  <view class="nav_right">
+  <scroll-view style="height: 100%;" scroll-y="true" class="container-list course-list" bindscroll="scroll" bindscrolltolower="scrolltolower">
+  <block wx:if="{{navRightItems[curIndex].courseList}}">
+    <block wx:for-items="{{navRightItems[curIndex].courseList}}" wx:for-item="item">
+      <view class="course-item" bindtap="viewDetail" data-id="{{item.courseId}}" data-title="{{item.courseTitle}}">
+        <view class="course-image">
+          <block wx:if="{{item.coursePic}}">
+              <image src="{{item.coursePic}}"></image>
+            </block>
+            <block wx:else>
+              <image src="../../images/coursepic/course_default.png"></image>
+            </block>
+        </view>
+        <view class="course-info">
+          <view>
+            <text class="course-title">{{item.courseTitle}}</text>
+            <text class="course-year">{{item.year}}</text>
+          </view>
+          <view class="course-rating">
+            <text class="label">授课时长</text>
+            <text class="duration">{{item.courseDuration}}</text>
+          </view>
+          <view class="teachers">
+            <text class="label">授课老师</text>
+            <text class="person">{{item.teachers}}</text>
+          </view>
+          <view class="casts">
+            <text class="label">课程简介: </text>
+            <view><text class="summary">{{item.courseDesc}}</text></view>
+          </view>
+        </view> 
+      </view>
+      <view class="article-split"></view>
+    </block>
+    </block>
+    <block wx:else>
+        <view class="load-content">
+          <text>没有更多内容了</text>
+        </view>
+    </block>
+    <!-- <view class="load-more-wrap">
+      <block wx:if="{{hasMore}}">
+        <view class="load-content">
+          <text class="weui-loading"/><text class="loading-text">玩命加载中</text>
+        </view>
+      </block>
+      <block wx:else>
+        <view class="load-content">
+          <text>没有更多内容了</text>
+        </view>
+      </block>
+    </view> -->
+  </scroll-view>
+  </view>
+<!-- </view> -->

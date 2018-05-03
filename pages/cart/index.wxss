@@ -1,0 +1,234 @@
+.container {
+  padding-bottom: 10rpx;
+  background-color: #f0eff5;
+  background-repeat: no-repeat;
+  background-size: 100% auto; 
+  background-position: bottom center;
+}
+.container .cart-image {
+  width: 120px;
+  height: 120px;
+  margin-top: 40rpx;
+}
+.container .cart-image-text{
+ margin-top: 20rpx;
+}
+.main-card {
+  padding-bottom: 300rpx;
+}
+.main-card-item{
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-top: 4rpx solid #dadada;
+  border-bottom: 20rpx solid #dadada;
+  /* margin-bottom: 20rpx; */
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: bottom center;
+  overflow: hidden;
+}
+.main-card-item#ykt{
+  /*background-image: url('/images/index/ykt-bg.png');*/
+  /*微信暂不支持静态bgimg文件，改用服务器url*/
+  background-image: url('../../images/mypage/ykt-bg.png');
+}
+
+/**一卡通**/
+.ykt-balance{
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  font-weight: bold;
+  padding: 25rpx 0 30rpx;
+}
+.ykt-balance-text{
+  font-size: 17pt;
+  line-height: 2;
+  color: #999;
+}
+.ykt-balance-value{
+  font-size: 58pt;
+  line-height: 1;
+  padding: 0 20rpx;
+  color: #ffbf92;
+}
+.ykt-cost{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 20rpx 0 30rpx;
+  font-weight: bold;
+  line-height: 200%;
+}
+.ykt-cost-text{
+  font-size: 10pt;
+  color: #999;
+}
+.ykt-cost-value{
+  font-size: 12pt;
+  font-weight: normal;
+  color: #777;
+  padding: 0 10rpx;
+}
+.ykt-cost-total{
+  font-size: 16pt;
+  color: #ffbf92;
+  padding: 0 10rpx;
+}
+.ykt-title{
+  font-size: 10pt;
+}
+.ykt-no-cost{
+  color: #bbb;
+}
+.card-info-hd{
+  display: flex;
+  justify-content: space-between;
+  padding-left: 30rpx;
+  padding-right: 20rpx;
+  padding-top: 10rpx;
+}
+.card-info-left{
+  display: flex;
+  color: #666;
+  flex-direction: column;
+}
+.card-info-right{
+  display: flex;
+  color: #666;
+  flex-direction: column;
+}
+.card-info-name{
+  font-size: 16pt;
+  line-height: 1.2;
+  letter-spacing: 1px;
+  color: #acacac;
+}
+.card-info-number{
+  line-height: 175%;
+  text-indent: 1px;
+  color: #aaa;
+}
+.main-card-item navigator{
+  display: flex;
+  flex-direction: column;
+}
+page .navigator-hover{
+  background-color: rgba(100,100,100,0.1);
+  opacity: 0.8;
+}
+.card-item-hd{
+  display: flex;
+  align-items: center;
+  height: 105rpx;
+  border-bottom: 1rpx solid #e5e5e5;
+  margin-left: 30rpx;
+}
+.card-item-icon{
+  width: 80rpx;
+  height: 80rpx;
+  margin-right: 10rpx;
+  border-radius:50%;
+
+}
+.card-item-name{
+  letter-spacing: 2px;
+}
+.card-item-more{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 25rpx;
+}
+.card-item-open{
+  width: 30rpx;
+  height: 30rpx;
+}
+.card-item-bd{
+  padding: 20rpx 25rpx 30rpx 0;
+  margin-left: 30rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.readingItem-content{
+    display: flex;
+    flex-flow:column wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 35rpx;
+    padding: 10rpx 30rpx 40rpx 30rpx;
+    /* background-color: #FCAEA0;
+    border:4rpx solid #452317;
+    border-radius: 10rpx; */
+}
+
+.readingItem-audio-content{
+    display: flex;
+    flex-flow:row nowrap;
+    justify-content: flex-start;
+    height: 100rpx;
+    width: 100%;
+}
+.read-audio-icon{
+    display: flex;
+    width: 100rpx;
+    height: 100rpx;
+    flex-shrink: 0;
+    margin-right: 16rpx;
+}
+
+/* read-audio-info */
+.read-audio-info{
+    display: flex;
+    flex-flow:column nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 28rpx;
+}
+.ri-en_content{
+line-height: 40rpx;
+  text-align: center;
+  font-size: 13px;
+  color:#666;
+  width: 90%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.ri-content{
+    color: #FFFFFF;
+}
+
+/*read-audio-control*/
+.read-audio-control{
+    display: flex;
+    flex-flow:row wrap;
+    align-items: center;
+    width: 100%;
+    height: 70rpx;
+}
+
+.read-audio-progress{
+    width: 540rpx;
+}
+.read-audio-duration{
+    margin-left: 20rpx;
+    font-size: 32rpx;
+}
+.audio-listen{
+    width: 70rpx;
+    height: 70rpx;
+    margin-left: 30rpx;
+}
